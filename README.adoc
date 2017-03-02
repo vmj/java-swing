@@ -1,0 +1,48 @@
+= Swing Java 8 examples
+
+These are the Swing examples from the book Java The Complete Reference 9th Edition by Herbert Schildt.
+
+The examples are modified a little, mainly to not use applet form but a standalone application.
+
+You will need Java 8 installed.  Use the provided Gradle wrapper to run the application.
+As an example of how to run the examples, here's how you would run the example 1 from chapter 31:
+
+  ./gradlew run -Pch31.e1
+
+Or, if you're on Windows, use `./gradlew.bat run -Pch31.e1` instead.
+
+All examples create one window.  Close that window to exit the example app.
+
+If you do not pass the project property ("-Pch31.e1" in above example), or the property is not recognized, then the
+menu example from chapter 33 is executed.
+
+If you modify the source code, just re-run the Gradle command: the `run` task will recompile the application when needed.
+
+== Chapter 31
+
+* E1: Just a window
+* E2: Event handling with a couple of buttons.
+      Their action listeners execute in event dispatcher thread,
+      and they can call JLabel.setText("...") and the UI
+      is redrawn automatically.
+* E3: Skipped (applet version of E2).
+* E4: Custom painting.
+
+== Chapter 32
+
+* E1: Label with and icon (from resources)
+* E2: Text field, set the window title on ENTER (original sets the status text, but that was using applet functionality)
+* E3: Buttons with icon and actionCommand, and a shared action listener
+* E4: Simple toggle button.
+* E5: Checkboxes selecting a set of languages.
+* E6: Same with radio buttons (single select).
+* E7: Tabs.
+* E8: ScrollPane (and BorderLayout and GridLayout).
+* E9: Simple combobox.
+* EA: Simple string list.
+* EB: Tree widget.
+* EC: Table.
+
+== Chapter 33
+
+Menu Demo.
